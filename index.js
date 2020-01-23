@@ -1,8 +1,11 @@
 import {
   AppRegistry,
 } from 'react-360';
-import Greeting from './components/Greeting';
-import Clock from './components/Clock';
+import Increment from './components/Increment';
+import Decrement from './components/Decrement';
+import Counter from './components/Counter';
 
-AppRegistry.registerComponent('Greeting', () => Greeting);
-AppRegistry.registerComponent('Clock', () => Clock);
+AppRegistry.registerComponent('Increment', () => Increment);
+AppRegistry.registerComponent('Decrement', () => Decrement);
+AppRegistry.registerComponent('Counter', () => Counter);
+

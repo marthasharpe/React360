@@ -5,21 +5,21 @@ import {
   View,
 } from 'react-360';
 
-const Clock = () => {
+const Decrement = () => {
 
   return (
     <View style={styles.panel2}>
       <View
-        style={styles.clockBox}>
-        <Text style={styles.clock}>
-          Clock
+        style={styles.decBox}>
+        <Text style={styles.dec}>
+          -1
         </Text>
       </View>
     </View>
   );
 }
 
-export default Clock;
+export default Decrement;
 
 const styles = StyleSheet.create({
   panel2: {
@@ -29,17 +29,14 @@ const styles = StyleSheet.create({
     // backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
     alignItems: 'center',
-    transform: [
-        {translate: [1, 0, 0]}
-      ]
   },
-  clockBox: {
+  decBox: {
     padding: 20,
-    backgroundColor: '#000000',
+    // backgroundColor: '#000000',
     borderColor: '#639dda',
     borderWidth: 2,
   },
-  clock: {
-    fontSize: 30,
+  dec: {
+    fontSize: 60,
   },
 });

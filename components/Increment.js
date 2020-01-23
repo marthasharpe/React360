@@ -5,24 +5,24 @@ import {
   View,
 } from 'react-360';
 
-const Greeting = () => {
+const Increment = () => {
 
   return (
-    <View style={styles.panel}>
+    <View style={styles.panel3}>
       <View
-        style={styles.greetingBox}>
-        <Text style={styles.greeting}>
-          Hello
+        style={styles.incBox}>
+        <Text style={styles.inc}>
+          +1
         </Text>
       </View>
     </View>
   );
 }
 
-export default Greeting;
+export default Increment;
 
 const styles = StyleSheet.create({
-  panel: {
+  panel3: {
     // Fill the entire surface
     width: 300,
     height: 600,
@@ -30,13 +30,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  greetingBox: {
+  incBox: {
     padding: 20,
-    backgroundColor: '#000000',
+    // backgroundColor: '#000000',
     borderColor: '#639dda',
     borderWidth: 2,
   },
-  greeting: {
-    fontSize: 30,
+  inc: {
+    fontSize: 60,
   },
 });

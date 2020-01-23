@@ -11,25 +11,28 @@ function init(bundle, parent, options = {}) {
   });
 
   const leftPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
-  const rightPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
+  leftPanel.setAngle(-1, 0);
 
+  const rightPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
+  rightPanel.setAngle(1, 0);
+
+  const centerPanel = new Surface(600, 600, Surface.SurfaceShape.Flat);
+  centerPanel.setAngle(0, 0);
 
   // Render your app content to the default cylinder surface
-  // r360.renderToSurface(
-  //   r360.createRoot('Greeting', { /* initial props */ }),
-  //   leftPanel,
-  // );
-
   r360.renderToSurface(
-    r360.createRoot('Clock'),
-    rightPanel
-    //new Location([-2, -2, -10]),
+    r360.createRoot('Increment'),
+    leftPanel,
   );
 
-  r360.renderToLocation(
-    r360.createRoot('Greeting'),
-    leftPanel
-    //new Location([0, -2, -10]),
+  r360.renderToSurface(
+    r360.createRoot('Decrement'),
+    rightPanel,
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('Counter'),
+    centerPanel,
   );
 
   // Load the initial environment

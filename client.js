@@ -19,6 +19,9 @@ function init(bundle, parent, options = {}) {
   const centerPanel = new Surface(600, 600, Surface.SurfaceShape.Flat);
   centerPanel.setAngle(0, 0);
 
+  const backPanel = new Surface(600, 600, Surface.SurfaceShape.Flat);
+  backPanel.setAngle(-3, 0);
+
   // Render your app content to the default cylinder surface
   r360.renderToSurface(
     r360.createRoot('Increment'),
@@ -33,6 +36,11 @@ function init(bundle, parent, options = {}) {
   r360.renderToSurface(
     r360.createRoot('Counter'),
     centerPanel,
+  );
+
+  r360.renderToSurface(
+    r360.createRoot('KeepCounting'),
+    backPanel,
   );
 
   // Load the initial environment
